@@ -33,5 +33,10 @@ SOONG_CONFIG_ONEPLUS_MSMNILE_FOD_SIZE = 220
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 
+# tell update_engine to not change dynamic partition table during updates
+# needed since our qti_dynamic_partitions does not include
+# vendor and odm and we also dont want to AB update them
+TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS := true
+
 # inherit from the proprietary version
 -include vendor/oneplus/hotdog/BoardConfigVendor.mk
