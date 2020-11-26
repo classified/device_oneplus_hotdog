@@ -38,5 +38,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 # API Level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# Camera
+PRODUCT_PACKAGES += \
+    OnePlusCameraHelper
+
 # Inherit from oneplus sm8150-common
 $(call inherit-product, device/oneplus/sm8150-common/common.mk)
